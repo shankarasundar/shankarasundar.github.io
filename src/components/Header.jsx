@@ -5,6 +5,7 @@ const NAV = [
   ["Skills", "#skills"],
   ["Projects", "#projects"],
   ["Experience", "#experience"],
+  ["Posts", "#posts"],
   ["Contact", "#contact"],
 ];
 

@@ -281,6 +281,24 @@ export const education = [
   },
 ];
 
+export const linkedinPosts = [
+  {
+    title: "HelixSKO27 · Game On · Vibecoding",
+    embedSrc: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7452162243456040961?collapsed=1",
+    link: "https://www.linkedin.com/posts/sankara-sundaram-4133393_helixsko27-gameon-vibecoding-activity-7452162243456040961-a7C1",
+  },
+  {
+    title: "Featured update",
+    embedSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7363104110885163008?collapsed=1",
+    link: "https://www.linkedin.com/feed/update/urn:li:share:7363104110885163008/",
+  },
+  {
+    title: "BMC · GenAI · HelixGPT",
+    embedSrc: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7232982575663697920?collapsed=1",
+    link: "https://www.linkedin.com/posts/sankara-sundaram-4133393_bmc-genai-helixgpt-activity-7232982575663697920-wz72",
+  },
+];
+
 export const certifications = [
   "ITIL v3 Practitioner",
   "PRINCE2 Practitioner",
