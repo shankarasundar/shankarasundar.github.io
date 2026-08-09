@@ -43,8 +43,7 @@
   padding-top: 2.5rem;
 }
 
-.main-content #skills,
-.main-content #recognition {
+.main-content #skills {
   padding: 2.75rem 1.75rem;
 }
 
@@ -62,8 +61,7 @@
   margin: 0 0 1.75rem;
 }
 
-#skills,
-#recognition {
+#skills {
   background: var(--bg-alt);
   border-radius: var(--radius);
 }
@@ -529,10 +527,49 @@
   max-width: 100%;
 }
 
-/* ---------- Posts (sidebar) ---------- */
+/* ---------- Sidebar blocks ---------- */
 
-.sidebar-inner {
-  padding: 2.5rem 0 2rem;
+.sidebar-block {
+  padding: 0 0 2rem;
+}
+
+.sidebar > .sidebar-block:first-child {
+  padding-top: 2.5rem;
+}
+
+.sidebar-block-divider {
+  border-top: 1px solid var(--border);
+  padding-top: 1.75rem;
+  margin-top: 0.25rem;
+}
+
+.sidebar-subsection-gap {
+  margin-top: 1.75rem;
+}
+
+.sidebar-block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.posts-toggle {
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.posts-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .sidebar-title {
@@ -541,6 +578,7 @@
 }
 
 .posts-stack {
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -585,12 +623,6 @@
 }
 
 /* ---------- Recognition ---------- */
-
-.recognition-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
 
 .achievements-list,
 .education-list {
@@ -705,8 +737,7 @@
     padding: 2.5rem 0;
   }
 
-  .main-content #skills,
-  .main-content #recognition {
+  .main-content #skills {
     padding: 2.25rem 1.25rem;
   }
 }
@@ -723,8 +754,7 @@
 
   .problems-grid,
   .skills-grid,
-  .projects-grid,
-  .recognition-grid {
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 
