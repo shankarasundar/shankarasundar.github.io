@@ -1,6 +1,6 @@
 export const profile = {
   name: "Sankara Sundaram",
-  title: "Solution Engineer — Enterprise AI Deployment & Presales",
+  title: "Senior Solution Engineer — Enterprise AI Deployment & Presales",
   tagline: "Solution Engineering · Advisory · AI & Digital Transformation",
   location: "Sydney, NSW, Australia",
   email: "shankara.sundar@gmail.com",
