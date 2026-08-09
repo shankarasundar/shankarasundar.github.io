@@ -725,12 +725,39 @@
     flex-direction: column;
   }
 
-  .sidebar {
-    flex: none;
-    width: 100%;
-    position: static;
-    max-height: none;
-    overflow-y: visible;
+  /* Let the aside/main wrappers disappear from the box tree so their
+     children can be freely reordered together as one flex column. */
+  .sidebar,
+  .main-content {
+    display: contents;
+  }
+
+  #about {
+    order: 1;
+  }
+
+  #skills {
+    order: 2;
+  }
+
+  #recognition {
+    order: 3;
+  }
+
+  #projects {
+    order: 4;
+  }
+
+  #experience {
+    order: 5;
+  }
+
+  #posts {
+    order: 6;
+  }
+
+  #activities {
+    order: 7;
   }
 
   .main-content .section {
