@@ -14,7 +14,7 @@ export const stats = [
   { value: "20+", label: "Years in IT & service management" },
   { value: "4", label: "Recent sales & value awards" },
   { value: "3", label: "Continents delivered across" },
-  { value: "C-level", label: "IT Directors & Enterprise Architects — primary audience" },
+  { value: "Primary audience", label: "C-level, IT Directors & Enterprise Architects" },
 ];
 
 export const problems = [
