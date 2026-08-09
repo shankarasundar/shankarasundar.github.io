@@ -7,6 +7,7 @@
   --accent: #2f5fff;
   --accent-soft: #eaefff;
   --card-bg: #ffffff;
+  --accent-2: #ff7a59;
   --radius: 14px;
   font-synthesis: none;
 }
@@ -21,6 +22,7 @@
     --accent: #6c8bff;
     --accent-soft: #1c2340;
     --card-bg: #181b22;
+    --accent-2: #ff9376;
   }
 }
 

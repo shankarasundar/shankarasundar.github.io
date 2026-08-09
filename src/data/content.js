@@ -281,6 +281,18 @@ export const education = [
   },
 ];
 
+export const personal = {
+  blurb:
+    "I am in Sydney with my wife, two kids and a border collie. Weekends are soccer, netball, trail runs and bush walks. Liverpool fan — always up for the banter.",
+};
+
+export const stravaActivities = [
+  {
+    id: "19637723833",
+    token: "d2SYYds_5gb3Ux003d5QUlvGlTeJc_EeSQCxHVwjiF0",
+  },
+];
+
 export const linkedinPosts = [
   {
     title: "HelixSKO27 · Game On · Vibecoding",
