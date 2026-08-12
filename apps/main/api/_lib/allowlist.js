@@ -33,6 +33,11 @@ const DYNAMIC_PATTERNS = [
     shape: "object",
     toPath: (slug) => `apps/travel/src/data/posts/${slug}.json`,
   },
+  {
+    prefix: "healthSection/",
+    shape: "object",
+    toPath: (slug) => `apps/health/src/data/sections/${slug}.json`,
+  },
 ];
 
 // Belt-and-suspenders: even if STATIC_FILES were ever misconfigured, never
@@ -82,6 +87,7 @@ export function itemsHaveIds(data) {
 // is served at once built (Vite serves everything under public/ at "/").
 const UPLOAD_DESTINATIONS = {
   travel: { dir: "apps/travel/public/uploads", publicPath: "/uploads" },
+  health: { dir: "apps/health/public/uploads", publicPath: "/uploads" },
 };
 
 const FILENAME_PATTERN = /^[a-z0-9][a-z0-9._-]{0,80}$/i;
