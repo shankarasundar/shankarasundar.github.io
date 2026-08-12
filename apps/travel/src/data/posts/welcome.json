@@ -1,0 +1,13 @@
+{
+  "id": "welcome",
+  "slug": "welcome",
+  "title": "Welcome to the travel log",
+  "date": "2026-08-12",
+  "coverImage": null,
+  "excerpt": "This is a placeholder post — log in as admin to edit it or add your first real trip.",
+  "body": [
+    "This is a placeholder post to get the blog started.",
+    "Log in as admin (the link is in the footer) to edit this post in place, or add a new one describing an actual trip.",
+    "Once you save, this page rebuilds and republishes automatically — usually live within about a minute."
+  ]
+}

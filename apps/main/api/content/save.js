@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { file, data, expectedSha } = req.body || {};
+  const { file, data, expectedSha, expectCreate } = req.body || {};
 
   if (!file || typeof file !== "string") {
     res.status(400).json({ error: "Missing or invalid 'file'" });
@@ -47,6 +47,11 @@ export default async function handler(req, res) {
     // copy blindly — expectedSha (if provided) is only used to detect a
     // conflict against what the admin last saw.
     const current = await getFile(entry.path);
+
+    if (expectCreate && current.data !== null) {
+      res.status(409).json({ error: "An item with that identifier already exists" });
+      return;
+    }
 
     if (expectedSha && current.sha && expectedSha !== current.sha) {
       res.status(409).json({

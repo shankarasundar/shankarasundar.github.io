@@ -32,8 +32,8 @@ export function EditModeProvider({ apiBase = "", children }) {
     setPending({});
   }, [apiBase]);
 
-  const markDirty = useCallback((file, data, sha) => {
-    setPending((prev) => ({ ...prev, [file]: { data, sha } }));
+  const markDirty = useCallback((file, data, { expectCreate } = {}) => {
+    setPending((prev) => ({ ...prev, [file]: { data, sha: prev[file]?.sha, expectCreate } }));
   }, []);
 
   const discardAll = useCallback(() => {
@@ -54,8 +54,8 @@ export function EditModeProvider({ apiBase = "", children }) {
 
     try {
       for (const file of files) {
-        const { data, sha } = pending[file];
-        await saveContent(apiBase, file, data, sha);
+        const { data, sha, expectCreate } = pending[file];
+        await saveContent(apiBase, file, data, { expectedSha: sha, expectCreate });
       }
       setPending({});
       setSaveState("saved");

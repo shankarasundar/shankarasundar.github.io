@@ -32,9 +32,9 @@ export function logout(apiBase) {
   return request(apiBase, "/logout", { method: "POST" });
 }
 
-export function saveContent(apiBase, file, data, expectedSha) {
+export function saveContent(apiBase, file, data, { expectedSha, expectCreate } = {}) {
   return request(apiBase, "/content/save", {
     method: "POST",
-    body: JSON.stringify({ file, data, expectedSha }),
+    body: JSON.stringify({ file, data, expectedSha, expectCreate }),
   });
 }

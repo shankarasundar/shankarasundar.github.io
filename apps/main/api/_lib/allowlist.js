@@ -22,6 +22,19 @@ const STATIC_FILES = {
   linkedinPosts: { path: "apps/main/src/data/linkedinPosts.json", shape: "array" },
 };
 
+// Dynamic patterns for one-file-per-item collections (Travel posts, later
+// Health sections). `prefix` is how the client names the item; the slug
+// after it is validated before ever being interpolated into a path.
+const SLUG_PATTERN = /^[a-z0-9-]+$/;
+
+const DYNAMIC_PATTERNS = [
+  {
+    prefix: "travelPost/",
+    shape: "object",
+    toPath: (slug) => `apps/travel/src/data/posts/${slug}.json`,
+  },
+];
+
 // Belt-and-suspenders: even if STATIC_FILES were ever misconfigured, never
 // allow a write under .github/** (workflows, CODEOWNERS, etc).
 function isForbidden(path) {
@@ -30,9 +43,21 @@ function isForbidden(path) {
 
 export function resolveFile(key) {
   const entry = STATIC_FILES[key];
-  if (!entry) return null;
-  if (isForbidden(entry.path)) return null;
-  return entry;
+  if (entry) {
+    if (isForbidden(entry.path)) return null;
+    return entry;
+  }
+
+  for (const pattern of DYNAMIC_PATTERNS) {
+    if (!key.startsWith(pattern.prefix)) continue;
+    const slug = key.slice(pattern.prefix.length);
+    if (!SLUG_PATTERN.test(slug)) return null;
+    const path = pattern.toPath(slug);
+    if (isForbidden(path)) return null;
+    return { path, shape: pattern.shape };
+  }
+
+  return null;
 }
 
 export function listKeys() {
