@@ -14,9 +14,5 @@
   {
     "id": "servicenow-certified-administrator",
     "label": "ServiceNow Certified Administrator"
-  },
-  {
-    "id": "test-verify-save",
-    "label": "TEST verifying save pipeline"
   }
 ]
