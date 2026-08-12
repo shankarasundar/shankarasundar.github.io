@@ -1,4 +1,5 @@
 import { profile } from "../data/content";
+import { LoginGate } from "edit-kit";
 
 export default function Contact() {
   const year = new Date().getFullYear();
@@ -25,6 +26,9 @@ export default function Contact() {
       <p className="contact-footer">
         © {year} {profile.name} · {profile.location}
       </p>
+      <div className="contact-admin">
+        <LoginGate />
+      </div>
     </footer>
   );
 }

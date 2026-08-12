@@ -697,6 +697,11 @@
   font-size: 0.85rem;
 }
 
+.contact-admin {
+  margin-top: 0.75rem;
+  opacity: 0.6;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 720px) {

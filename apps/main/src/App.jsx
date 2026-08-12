@@ -7,6 +7,7 @@ import Activities from "./components/Activities";
 import Credentials from "./components/Credentials";
 import Posts from "./components/Posts";
 import Contact from "./components/Contact";
+import { SaveBar } from "edit-kit";
 import "./App.css";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         </main>
       </div>
       <Contact />
+      <SaveBar />
     </div>
   );
 }

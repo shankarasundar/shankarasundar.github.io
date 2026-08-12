@@ -1,8 +1,12 @@
 import { useEffect } from "react";
-import { personal, stravaActivities } from "../data/content";
+import { personal as personalData, stravaActivities as stravaActivitiesData } from "../data/content";
 import yosemite from "../assets/images/yosemite.jpg";
+import { useEditableCollection, EditableText, ItemControls, AddItemButton } from "edit-kit";
 
 export default function Activities() {
+  const personal = useEditableCollection("personal", personalData);
+  const stravaActivities = useEditableCollection("stravaActivities", stravaActivitiesData);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://strava-embeds.com/embed.js";
@@ -20,11 +24,11 @@ export default function Activities() {
 
       <div className="activities-intro">
         <img className="activities-photo" src={yosemite} alt="Sankara on a trail run" />
-        <p className="activities-blurb">{personal.blurb}</p>
+        <EditableText as="p" className="activities-blurb" value={personal.items.blurb} onChange={(v) => personal.updateField("blurb", v)} />
       </div>
 
       <div className="activities-grid">
-        {stravaActivities.map((a) => (
+        {stravaActivities.items.map((a) => (
           <div className="activity-card" key={a.id}>
             <div
               className="strava-embed-placeholder"
@@ -34,9 +38,20 @@ export default function Activities() {
               data-from-embed="false"
               data-token={a.token}
             />
+            <ItemControls onDelete={() => stravaActivities.removeItem(a.id)} />
           </div>
         ))}
       </div>
+      <AddItemButton
+        label="Add Strava activity"
+        onClick={() => {
+          const id = window.prompt("Strava activity ID (from the embed code's data-embed-id):");
+          if (!id) return;
+          const token = window.prompt("Strava embed token (from the embed code's data-token):");
+          if (!token) return;
+          stravaActivities.addItem({ id, token });
+        }}
+      />
     </section>
   );
 }

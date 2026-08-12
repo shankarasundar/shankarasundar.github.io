@@ -1,0 +1,141 @@
+/* Shared admin-editing UI. Uses the host app's CSS variables when present
+   (--accent, --border, --text-muted, --card-bg) with sane fallbacks so this
+   works standalone in apps/travel and apps/health too. */
+
+.ek-editable {
+  outline: 1px dashed transparent;
+  border-radius: 3px;
+  cursor: text;
+  transition: outline-color 0.15s;
+}
+
+.ek-editable:hover,
+.ek-editable:focus {
+  outline-color: var(--accent, #3457ff);
+  outline-offset: 2px;
+}
+
+.ek-item-controls {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.ek-item-controls button {
+  border: 1px solid var(--border, #ccc);
+  background: var(--card-bg, #fff);
+  color: var(--text-muted, #666);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.ek-item-controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.ek-item-delete {
+  color: #c0392b !important;
+  border-color: #c0392b !important;
+}
+
+.ek-add-item {
+  border: 1px dashed var(--accent, #3457ff);
+  background: transparent;
+  color: var(--accent, #3457ff);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.75rem;
+}
+
+.ek-admin-link {
+  border: none;
+  background: none;
+  color: var(--text-muted, #888);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ek-login-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.ek-login-form input {
+  border: 1px solid var(--border, #ccc);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.ek-login-form button {
+  border: 1px solid var(--border, #ccc);
+  background: var(--card-bg, #fff);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.ek-login-error {
+  color: #c0392b;
+  font-size: 0.78rem;
+}
+
+.ek-save-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card-bg, #1a1d24);
+  color: var(--text, #fff);
+  border: 1px solid var(--border, #333);
+  border-radius: 999px;
+  padding: 0.6rem 0.6rem 0.6rem 1.1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  font-size: 0.85rem;
+  max-width: calc(100vw - 2rem);
+}
+
+.ek-save-bar-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ek-save-bar-actions button {
+  border: 1px solid var(--border, #444);
+  background: transparent;
+  color: inherit;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ek-save-bar-save {
+  background: var(--accent, #3457ff) !important;
+  border-color: var(--accent, #3457ff) !important;
+  color: #fff !important;
+}
+
+.ek-save-bar-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
