@@ -1,0 +1,6 @@
+[
+  { "id": "years-experience", "value": "20+", "label": "Years in IT & service management" },
+  { "id": "sales-awards", "value": "4", "label": "Recent sales & value awards" },
+  { "id": "continents", "value": "3", "label": "Continents delivered across" },
+  { "id": "primary-audience", "value": "Primary audience", "label": "C-level, IT Directors & Enterprise Architects" }
+]

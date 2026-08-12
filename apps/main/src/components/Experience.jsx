@@ -8,7 +8,7 @@ export default function Experience() {
 
       <div className="timeline">
         {experience.map((e) => (
-          <div className="timeline-item" key={`${e.org}-${e.period}`}>
+          <div className="timeline-item" key={e.id}>
             <div className="timeline-dot" />
             <div className="timeline-content">
               <div className="timeline-head">

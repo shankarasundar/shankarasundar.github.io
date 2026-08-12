@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="section">
       <div className="stats-grid">
         {stats.map((s) => (
-          <div className="stat" key={s.label}>
+          <div className="stat" key={s.id}>
             <div className="stat-value">{s.value}</div>
             <div className="stat-label">{s.label}</div>
           </div>
@@ -17,7 +17,7 @@ export default function About() {
 
       <div className="problems-grid">
         {problems.map((p) => (
-          <div className="problem-card" key={p.tag}>
+          <div className="problem-card" key={p.id}>
             <span className="problem-tag">{p.tag}</span>
             <h3>{p.title}</h3>
             <p>{p.body}</p>

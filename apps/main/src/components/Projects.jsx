@@ -8,7 +8,7 @@ export default function Projects() {
 
       <div className="projects-grid">
         {projects.map((p) => (
-          <article className="project-card" key={p.title}>
+          <article className="project-card" key={p.id}>
             <h3>{p.title}</h3>
             <p className="project-org">{p.org}</p>
 

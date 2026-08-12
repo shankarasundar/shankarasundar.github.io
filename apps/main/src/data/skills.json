@@ -1,0 +1,46 @@
+[
+  {
+    "id": "solution-engineering-presales",
+    "name": "Solution Engineering & Presales",
+    "level": 95,
+    "items": [
+      "Value-based selling",
+      "Discovery & qualification",
+      "MEDDIC",
+      "Champion building",
+      "Business case",
+      "RFx support",
+      "Roadshows & keynotes"
+    ]
+  },
+  {
+    "id": "platforms-technology",
+    "name": "Platforms & Technology",
+    "level": 90,
+    "items": [
+      "BMC Helix ITSM/ITOM",
+      "HelixGPT",
+      "Digital Workplace",
+      "ServiceNow ITSM/PPM/GRC",
+      "Cloud & Infrastructure"
+    ]
+  },
+  {
+    "id": "ai-agentic-systems",
+    "name": "AI & Agentic Systems",
+    "level": 82,
+    "items": ["Conversational AI", "Agentic workflows", "LangGraph / LangSmith", "RAG frameworks"]
+  },
+  {
+    "id": "consulting-advisory",
+    "name": "Consulting & Advisory",
+    "level": 92,
+    "items": [
+      "ITIL / ITSM maturity",
+      "SIAM",
+      "Capacity & demand planning",
+      "Agile / SAFe delivery",
+      "Process design"
+    ]
+  }
+]

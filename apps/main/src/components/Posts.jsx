@@ -25,7 +25,7 @@ export default function Posts() {
         <>
           <div className="posts-stack">
             {linkedinPosts.map((p) => (
-              <div className="post-card" key={p.embedSrc}>
+              <div className="post-card" key={p.id}>
                 <iframe
                   src={p.embedSrc}
                   title={p.title}

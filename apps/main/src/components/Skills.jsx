@@ -8,7 +8,7 @@ export default function Skills() {
 
       <div className="skills-grid">
         {skills.map((s) => (
-          <div className="skill-card" key={s.name}>
+          <div className="skill-card" key={s.id}>
             <div className="skill-head">
               <span className="skill-name">{s.name}</span>
               <span className="skill-level">{s.level}%</span>

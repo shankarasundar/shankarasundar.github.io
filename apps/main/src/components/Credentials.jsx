@@ -7,7 +7,7 @@ export default function Credentials() {
       <h2 className="sidebar-title">Achievements</h2>
       <ul className="achievements-list">
         {achievements.map((a) => (
-          <li key={`${a.year}-${a.title}`}>
+          <li key={a.id}>
             <span className="achievement-year">{a.year}</span>
             <div>
               <p className="achievement-title">{a.title}</p>
@@ -21,7 +21,7 @@ export default function Credentials() {
       <h2 className="sidebar-title">Background</h2>
       <ul className="education-list">
         {education.map((ed) => (
-          <li key={ed.degree}>
+          <li key={ed.id}>
             <p className="education-degree">{ed.degree}</p>
             <p className="education-school">
               {ed.school} · {ed.detail}
@@ -31,8 +31,8 @@ export default function Credentials() {
       </ul>
       <div className="tag-row">
         {certifications.map((c) => (
-          <span className="tag" key={c}>
-            {c}
+          <span className="tag" key={c.id}>
+            {c.label}
           </span>
         ))}
       </div>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "helixgpt-agentic-ai-apj",
+    "title": "HelixGPT & Agentic AI Rollout for APJ Enterprise Accounts",
+    "org": "BMC Software · 2022–Present",
+    "problem": "Agentic and conversational AI was pitched as novelty, with no business case that survived C-level scrutiny.",
+    "approach": "Built RAG and LangGraph-based demonstrations that tied HelixGPT directly to deflection, cycle-time and employee-experience metrics for strategic APJ accounts.",
+    "outcome": "Drove ACV growth through value-based selling and collaborative value reviews, converting technical wins into commercial traction.",
+    "tags": ["HelixGPT", "RAG", "LangGraph", "Value Selling"]
+  },
+  {
+    "id": "servicenow-maturity-advisory",
+    "title": "ServiceNow Maturity Advisory",
+    "org": "ValueFlow · Principal Consultant · 2019–2022",
+    "problem": "Customers had bought ServiceNow but adoption had plateaued, with a growing backlog of unrealized value.",
+    "approach": "Acted as principal advisor, PM/Scrum Master and Product Owner across ITSM, ITBM, GRC (Enterprise Risk) and Vendor Management portfolios.",
+    "outcome": "Turned a stalled BAU backlog into a continuous, managed-services-driven platform improvement cycle.",
+    "tags": ["ServiceNow", "GRC", "ITBM", "Customer Success"]
+  },
+  {
+    "id": "sm-20-transformation-westpac",
+    "title": "SM 2.0 Transformation Program",
+    "org": "Westpac · Product Owner & Senior BA · 2018–2019",
+    "problem": "Incident, Problem, Change and Service Level Management capability gaps at enterprise scale.",
+    "approach": "Led capability uplift as Product Owner in a SAFe delivery model, managing Scrum Masters, BAs, a ServiceNow tech lead, developers and testers.",
+    "outcome": "Delivered features, epics and stories against customer-defined sprint objectives and acceptance criteria.",
+    "tags": ["SAFe", "Product Ownership", "ServiceNow"]
+  },
+  {
+    "id": "multi-vendor-siam-diageo",
+    "title": "Multi-Vendor SIAM Operating Model",
+    "org": "TCS UK · Diageo plc · SIAM Consultant · 2014–2016",
+    "problem": "A global drinks manufacturer had no shared process spine across a multi-vendor estate.",
+    "approach": "Owned availability and capacity management, enforcing process adherence, governance, audit and risk requirements across multiple suppliers.",
+    "outcome": "Delivered SLM/KPI reporting and CSI, with storage capacity planning and demand trending for business-critical SAP systems.",
+    "tags": ["SIAM", "Availability", "SAP", "GRC"]
+  }
+]

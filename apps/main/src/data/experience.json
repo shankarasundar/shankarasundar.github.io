@@ -1,0 +1,144 @@
+[
+  {
+    "id": "bmc-senior-solution-engineer",
+    "role": "Senior Solution Engineer",
+    "org": "BMC Software",
+    "period": "May 2022 — Present",
+    "bullets": [
+      "Own the technical and value story for BMC Helix across strategic APJ accounts — from discovery through to collaborative value reviews.",
+      "Drive ACV growth with value-based selling, champion building and collaborative value reviews for strategic customers.",
+      "Deliver tailored demonstrations of Helix ITSM/ITOM/Digital Workplace/HelixGPT that connect complex technology to C-level audiences.",
+      "Provide thought leadership on employee experience, conversational AI and process efficiency through workshops and executive discussions.",
+      "Collaborate across sales, product management, R&D, SaaS Ops and customer success to land complete solutions."
+    ],
+    "tags": ["BMC Helix", "HelixGPT", "Value Selling", "C-level"]
+  },
+  {
+    "id": "valueflow-principal-consultant",
+    "role": "Principal Consultant",
+    "org": "ValueFlow",
+    "period": "Aug 2019 — Apr 2022",
+    "bullets": [
+      "Trusted advisor for customers on their ServiceNow maturity journey, wearing principal advisor, PM/Scrum Master, Product Owner and BA hats.",
+      "Delivered ITSM (Incident, Problem, Change, MIM), custom apps, ITBM, GRC (Enterprise Risk) and Vendor Management portfolios.",
+      "Ran managed-services customer success — grooming a BAU backlog into continuous platform improvement."
+    ],
+    "tags": ["ServiceNow", "GRC", "ITBM", "Customer Success"]
+  },
+  {
+    "id": "westpac-product-owner",
+    "role": "Product Owner & Senior BA",
+    "org": "Westpac",
+    "period": "Jul 2018 — Jul 2019",
+    "bullets": [
+      "Led capability uplift across Incident, Problem, Change and Service Level Management in the SM 2.0 transformation program.",
+      "Managed a scrum of Scrum Master, BAs, ServiceNow tech lead, developers and testers in a SAFe delivery model.",
+      "Served as voice of the customer; defined sprint objectives and acceptance criteria for features, epics and stories in JIRA."
+    ],
+    "tags": ["SAFe", "Product Ownership", "ServiceNow"]
+  },
+  {
+    "id": "tcs-downer-service-design-lead",
+    "role": "Service Design Lead",
+    "org": "Tata Consultancy Services — Downer",
+    "period": "Sep 2017 — Jul 2018",
+    "bullets": [
+      "Designed and implemented service management processes on ServiceNow within a SIAM framework.",
+      "Ran process design workshops, gap analysis and a maturity roadmap with target KPIs and metrics.",
+      "Produced to-be process definitions for Incident, Problem, Change and Knowledge, plus functional requirements and UAT acceptance criteria."
+    ],
+    "tags": ["SIAM", "Process Design", "ServiceNow"]
+  },
+  {
+    "id": "tcs-commonwealth-bank-service-design-specialist",
+    "role": "Service Design Process Specialist",
+    "org": "Tata Consultancy Services — Commonwealth Bank",
+    "period": "Apr 2017 — Sep 2017",
+    "bullets": [
+      "Demand and capacity management specialist across infrastructure services.",
+      "Engaged early in the service lifecycle to capture demand, run capacity impact analysis and build forecast-driven capacity plans."
+    ],
+    "tags": ["Capacity", "Demand Management"]
+  },
+  {
+    "id": "tcs-woolworths-configuration-management",
+    "role": "Configuration Management Consultant",
+    "org": "Tata Consultancy Services — Woolworths",
+    "period": "Jan 2017 — Mar 2017",
+    "bullets": [
+      "External process assessor for CMDB and configuration management maturity.",
+      "Assessed as-is function maturity and recommended remediation for identified gaps."
+    ],
+    "tags": ["CMDB", "Assessment"]
+  },
+  {
+    "id": "tcs-uk-diageo-siam-consultant",
+    "role": "SIAM Consultant",
+    "org": "Tata Consultancy Services, UK — Diageo plc",
+    "period": "Jan 2014 — Sep 2016",
+    "bullets": [
+      "Owned availability and capacity management across a multi-vendor estate for a global drinks manufacturer.",
+      "Enforced process adherence, governance, audit and risk requirements across multiple suppliers.",
+      "Delivered SLM/KPI reporting and CSI; ran storage capacity planning and demand trending for business-critical SAP systems."
+    ],
+    "tags": ["SIAM", "Availability", "SAP", "GRC"]
+  },
+  {
+    "id": "tcs-london-telefonica-assurance-lead",
+    "role": "Service Management & Assurance Lead",
+    "org": "Tata Consultancy Services, London — Telefónica O2 UK",
+    "period": "Sep 2011 — Jan 2014",
+    "bullets": [
+      "Service assurance across Incident, Problem, Change, Configuration, Availability and Capacity for a major European carrier.",
+      "Monitored and reported SLAs/KPIs against supplier contractual obligations, mapped to service credits and penalties.",
+      "Implemented a service catalogue model for IT service request management and led infrastructure projects.",
+      "Earlier: Process Transition Lead at General Motors, USA (2011) — aligned vendor processes to global ITIL standards."
+    ],
+    "tags": ["Service Assurance", "SLA/KPI", "Telecom"]
+  },
+  {
+    "id": "ibm-dealhub-technical-solution-lead",
+    "role": "Technical Solution Lead — DealHub",
+    "org": "IBM Sales & Distribution, India",
+    "period": "Aug 2007 — Apr 2010",
+    "bullets": [
+      "Solution integrator for large software and infrastructure deals across India and South Asia.",
+      "Built reusable solution documents, reference architectures and configurators; led bid management and coordination."
+    ],
+    "tags": ["Bid Management", "Solution Design"]
+  },
+  {
+    "id": "reliance-business-process-analyst",
+    "role": "Business Process Analyst",
+    "org": "Reliance Communications",
+    "period": "Jan 2007 — Jul 2007",
+    "bullets": [
+      "Requirements and process design for a Remedy ITSM v7.0 implementation.",
+      "Ran ITIL process and technology workshops, gap analysis, use cases and functional requirement specifications."
+    ],
+    "tags": ["Remedy", "ITIL", "Requirements"]
+  },
+  {
+    "id": "wipro-application-architect",
+    "role": "Application Architect",
+    "org": "Wipro Technologies, Bangalore",
+    "period": "Aug 2005 — Aug 2007",
+    "bullets": [
+      "Client solutions team — presales, tender responses and bid ownership on large infrastructure deals.",
+      "Provided solution architecture, product demonstrations and pilots to prospective customers globally.",
+      "Engaged in process consulting during solution analysis and due diligence."
+    ],
+    "tags": ["Presales", "Architecture", "Remedy ITSM"]
+  },
+  {
+    "id": "cognizant-dell-team-lead",
+    "role": "Team Lead → Technical Support Specialist",
+    "org": "Cognizant · Dell International Services",
+    "period": "Sep 2002 — Aug 2005",
+    "bullets": [
+      "Foundation years leading support teams for Citi Cards Technology and DFS.",
+      "Team leadership across technology assistance centres and global retail support."
+    ],
+    "tags": ["Support Ops", "Team Lead"]
+  }
+]
