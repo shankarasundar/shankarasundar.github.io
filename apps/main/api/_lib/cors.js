@@ -16,6 +16,12 @@ export function applyCors(req, res) {
   const origin = req.headers.origin;
   const allowed = allowedOrigins();
 
+  // These responses vary per-Origin (session cookies, credentials) — never
+  // let Vercel's edge cache one origin's CORS headers and serve them to a
+  // different origin. `Vary: Origin` alone isn't reliably honored by the
+  // edge cache layer for serverless function responses.
+  res.setHeader("Cache-Control", "no-store");
+
   if (origin && allowed.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
     res.setHeader("Access-Control-Allow-Credentials", "true");
