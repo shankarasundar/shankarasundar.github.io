@@ -1,6 +1,18 @@
 [
-  { "id": "itil-v3-practitioner", "label": "ITIL v3 Practitioner" },
-  { "id": "prince2-practitioner", "label": "PRINCE2 Practitioner" },
-  { "id": "bcs-business-analyst", "label": "BCS Business Analyst" },
-  { "id": "servicenow-certified-administrator", "label": "ServiceNow Certified Administrator" }
+  {
+    "id": "itil-v3-practitioner",
+    "label": "ITIL v3 Practitioner"
+  },
+  {
+    "id": "prince2-practitioner",
+    "label": "PRINCE2 Practitioner"
+  },
+  {
+    "id": "bcs-business-analyst",
+    "label": "BCS Business Analyst"
+  },
+  {
+    "id": "servicenow-certified-administrator",
+    "label": "ServiceNow Certified Administrator"
+  }
 ]
