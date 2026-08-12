@@ -68,6 +68,7 @@ export function EditModeProvider({ apiBase = "", children }) {
 
   const value = useMemo(
     () => ({
+      apiBase,
       isAdmin,
       isEditMode: isAdmin && isEditMode,
       setEditMode,

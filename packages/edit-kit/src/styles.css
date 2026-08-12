@@ -139,3 +139,48 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.ek-image-upload {
+  margin: 0.75rem 0;
+}
+
+.ek-image-upload-preview img {
+  max-width: 220px;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ek-image-upload-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ek-image-upload-controls button {
+  border: 1px dashed var(--accent, #3457ff);
+  background: transparent;
+  color: var(--accent, #3457ff);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ek-image-upload-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ek-image-upload-remove {
+  border-color: #c0392b !important;
+  color: #c0392b !important;
+}
+
+.ek-image-upload-error {
+  color: #c0392b;
+  font-size: 0.78rem;
+  margin-top: 0.4rem;
+}

@@ -4,45 +4,143 @@
   flex-direction: column;
 }
 
-.site-header {
+/* ---------- Nav ---------- */
+
+.travel-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.travel-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 1.5rem 1.5rem 0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.brand {
+.travel-brand {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text);
 }
 
-.back-link {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+.travel-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
 }
+
+.travel-nav-links a {
+  color: var(--text-muted);
+}
+
+.travel-nav-links a:hover {
+  color: var(--text);
+}
+
+/* ---------- Hero ---------- */
+
+.travel-hero {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+  overflow: hidden;
+}
+
+.travel-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px circle at 85% 10%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 60%),
+    radial-gradient(500px circle at 75% 60%, color-mix(in srgb, var(--accent-2) 16%, transparent), transparent 65%),
+    radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: auto, auto, 22px 22px;
+  opacity: 0.9;
+}
+
+.travel-hero.has-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.travel-hero.has-image::before {
+  display: none;
+}
+
+.travel-hero-overlay {
+  display: none;
+}
+
+.travel-hero.has-image .travel-hero-overlay {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.travel-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 3.5rem;
+  width: 100%;
+}
+
+.travel-hero-kicker {
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.6rem;
+  color: var(--accent);
+}
+
+.travel-hero.has-image .travel-hero-kicker {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.travel-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 0 0 0.6rem;
+  color: var(--text);
+}
+
+.travel-hero.has-image .travel-hero-content h1 {
+  color: #fff;
+}
+
+.travel-hero-lede {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 480px;
+}
+
+.travel-hero.has-image .travel-hero-lede {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ---------- Main / list page ---------- */
 
 .site-main {
   flex: 1;
-  max-width: 900px;
+}
+
+.post-list-page {
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   padding: 2.5rem 1.5rem 4rem;
-}
-
-/* ---------- Post list ---------- */
-
-.post-list-page h1 {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  margin-bottom: 0.5rem;
-}
-
-.page-lede {
-  color: var(--text-muted);
-  margin-bottom: 2rem;
 }
 
 .add-post-block {
@@ -77,53 +175,105 @@
   color: var(--accent);
 }
 
+.post-grid-empty {
+  color: var(--text-muted);
+}
+
+/* ---------- Post grid / cards ---------- */
+
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
 }
 
 .post-card {
   display: block;
-  border: 1px solid var(--border);
+  color: inherit;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--card-bg);
-  color: inherit;
 }
 
 .post-card:hover {
-  border-color: var(--accent);
   text-decoration: none;
 }
 
-.post-card-cover {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
+.post-card-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.25s ease;
 }
 
-.post-card-body {
-  padding: 1.1rem 1.25rem;
+.post-card:hover .post-card-image {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+}
+
+.post-card-image-empty {
+  background-image: linear-gradient(135deg, var(--accent-soft), var(--bg-alt));
+}
+
+.post-card-scrim {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 1.25rem 1.1rem 1rem;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.72));
+  color: #fff;
+}
+
+.post-card-image-empty .post-card-scrim {
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.28));
+  color: var(--text);
 }
 
 .post-card-date {
-  color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
+  opacity: 0.85;
 }
 
-.post-card-body h2 {
-  font-size: 1.1rem;
-  margin: 0.35rem 0 0.5rem;
+.post-card-scrim h2 {
+  font-size: 1.15rem;
+  margin: 0.2rem 0 0;
 }
 
-.post-card-body p {
+.post-card-excerpt {
   color: var(--text-muted);
   font-size: 0.9rem;
+  margin-top: 0.7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-card-image {
+    transition: none;
+  }
 }
 
 /* ---------- Post detail ---------- */
+
+.post-detail-page {
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.post-detail-fresh-notice {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  margin: 0.75rem 0 1.25rem;
+}
 
 .post-detail-page h1 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
@@ -132,7 +282,7 @@
 
 .post-detail-cover {
   width: 100%;
-  max-height: 360px;
+  max-height: 420px;
   object-fit: cover;
   border-radius: var(--radius);
   margin-top: 0.5rem;
@@ -157,10 +307,53 @@
   line-height: 1.7;
 }
 
+.post-detail-gallery-block {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-detail-gallery-block h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.post-detail-gallery-item {
+  position: relative;
+}
+
+.post-detail-gallery-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.post-detail-gallery-item button {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  cursor: pointer;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   padding: 1.5rem 1.5rem 2.5rem;
@@ -173,4 +366,31 @@
 .footer-admin {
   margin-top: 0.5rem;
   opacity: 0.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-hero {
+    min-height: 38vh;
+  }
+
+  .travel-nav-inner {
+    padding: 1rem 1.25rem;
+  }
+
+  .post-list-page,
+  .post-detail-page {
+    padding: 2rem 1.25rem 3rem;
+  }
 }

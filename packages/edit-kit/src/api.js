@@ -38,3 +38,10 @@ export function saveContent(apiBase, file, data, { expectedSha, expectCreate } =
     body: JSON.stringify({ file, data, expectedSha, expectCreate }),
   });
 }
+
+export function uploadImage(apiBase, site, filename, dataBase64) {
+  return request(apiBase, "/content/upload-image", {
+    method: "POST",
+    body: JSON.stringify({ site, filename, dataBase64 }),
+  });
+}

@@ -68,3 +68,23 @@ export async function putFile(path, data, { sha, message } = {}) {
   const json = await res.json();
   return { sha: json.content.sha };
 }
+
+// Like putFile, but `base64Content` is raw base64 (e.g. an image) rather
+// than JSON to be stringified. Always a create (images get unique
+// timestamped filenames, so a collision would mean something's wrong).
+export async function putBinaryFile(path, base64Content, { message } = {}) {
+  const res = await fetch(`${apiBase()}/contents/${path}`, {
+    method: "PUT",
+    headers: { ...authHeaders(), "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: message || `Upload ${path}`,
+      content: base64Content,
+      branch: branch(),
+    }),
+  });
+
+  if (!res.ok) throw new Error(`GitHub PUT ${path} failed: ${res.status} ${await res.text()}`);
+
+  const json = await res.json();
+  return { sha: json.content.sha };
+}

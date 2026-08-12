@@ -76,3 +76,23 @@ export function itemsHaveIds(data) {
   if (!Array.isArray(data)) return true;
   return data.every((item) => item && typeof item.id === "string" && item.id.length > 0);
 }
+
+// Where uploaded images are allowed to land. `site` is a short name the
+// client sends (never a raw path); `publicPath` is the URL path the file
+// is served at once built (Vite serves everything under public/ at "/").
+const UPLOAD_DESTINATIONS = {
+  travel: { dir: "apps/travel/public/uploads", publicPath: "/uploads" },
+};
+
+const FILENAME_PATTERN = /^[a-z0-9][a-z0-9._-]{0,80}$/i;
+const ALLOWED_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
+
+export function resolveUploadDir(site) {
+  return UPLOAD_DESTINATIONS[site] || null;
+}
+
+export function isSafeImageFilename(filename) {
+  if (!FILENAME_PATTERN.test(filename)) return false;
+  const ext = filename.slice(filename.lastIndexOf(".")).toLowerCase();
+  return ALLOWED_EXTENSIONS.has(ext);
+}

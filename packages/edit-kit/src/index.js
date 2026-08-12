@@ -4,7 +4,8 @@ export { EditableText } from "./EditableText.jsx";
 export { ItemControls, AddItemButton } from "./EditableList.jsx";
 export { LoginGate } from "./LoginGate.jsx";
 export { SaveBar } from "./SaveBar.jsx";
-export { saveContent } from "./api.js";
+export { ImageUpload } from "./ImageUpload.jsx";
+export { saveContent, uploadImage } from "./api.js";
 
 // styles.css is not re-exported here (CSS can't be re-exported from a JS
 // barrel) — consuming apps import it directly:

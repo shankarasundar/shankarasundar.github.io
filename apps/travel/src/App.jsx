@@ -1,5 +1,6 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { LoginGate, SaveBar } from "edit-kit";
+import Nav from "./components/Nav";
 import PostList from "./components/PostList";
 import PostDetail from "./components/PostDetail";
 import "./App.css";
@@ -9,14 +10,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header className="site-header">
-        <Link to="/" className="brand">
-          Travel
-        </Link>
-        <a className="back-link" href="https://www.shankshub.page">
-          Sankara Sundaram →
-        </a>
-      </header>
+      <Nav />
 
       <main className="site-main">
         <Routes>
