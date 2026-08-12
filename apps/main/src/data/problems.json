@@ -15,7 +15,7 @@
     "id": "ai-with-no-business-case",
     "tag": "03",
     "title": "AI with no business case",
-    "body": "Agentic and conversational AI pitched as novelty. I frame it against real deflection, cycle-time and experience metrics using RAG and LangGraph-based patterns."
+    "body": "Agentic and conversational AI pitched as novelty. I frame it against real deflection, cycle-time and experience metrics using LangGraph-based patterns."
   },
   {
     "id": "deals-that-dont-close",
