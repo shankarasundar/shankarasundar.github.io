@@ -1,0 +1,11 @@
+{
+  "id": "about-me",
+  "slug": "about-me",
+  "title": "About me",
+  "coverImage": null,
+  "excerpt": "New section — edit this excerpt.",
+  "body": [
+    "New section — edit this text."
+  ],
+  "gallery": []
+}
